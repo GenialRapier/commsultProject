@@ -5,5 +5,5 @@ public interface Sensors {
 	public void setMeasurement(Double measurement);
 	public Double getMeasurement();
 	public void addPropertyChangeListener();
-	public void removepPropertyChangeListener();
+	public void removePropertyChangeListener();
 }
