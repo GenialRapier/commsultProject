@@ -1,19 +1,27 @@
 package id.ac.sgu.commsultProject;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+
 public class Anemometer implements Sensors {
 	
 	private Double measurement;
+	private PropertyChangeSupport support;
+	
+	public Anemometer() {
+		support = new PropertyChangeSupport(this);
+	}
 
 	@Override
-	public void updateMeasurement() {
+	public void updateMeasurement(Double measurement) {
 		// TODO Auto-generated method stub
-		
+		support.firePropertyChange("measurement", this.measurement, measurement);
 	}
 
 	@Override
 	public void setMeasurement(Double measurement) {
 		// TODO Auto-generated method stub
-		
+		this.measurement = measurement;
 	}
 
 	@Override
@@ -23,15 +31,15 @@ public class Anemometer implements Sensors {
 	}
 
 	@Override
-	public void addPropertyChangeListener() {
+	public void addPropertyChangeListener(PropertyChangeListener pcl) {
 		// TODO Auto-generated method stub
-		
+		support.addPropertyChangeListener(pcl);
 	}
 
 	@Override
-	public void removePropertyChangeListener() {
+	public void removePropertyChangeListener(PropertyChangeListener pcl) {
 		// TODO Auto-generated method stub
-		
+		support.addPropertyChangeListener(pcl);
 	}
 
 }

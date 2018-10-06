@@ -1,9 +1,11 @@
 package id.ac.sgu.commsultProject;
 
+import java.beans.PropertyChangeListener;
+
 public interface Sensors {
-	public void updateMeasurement();
+	public void updateMeasurement(Double measurement);
 	public void setMeasurement(Double measurement);
 	public Double getMeasurement();
-	public void addPropertyChangeListener();
-	public void removePropertyChangeListener();
+	public void addPropertyChangeListener(PropertyChangeListener pcl);
+	public void removePropertyChangeListener(PropertyChangeListener pcl);
 }
