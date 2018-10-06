@@ -21,6 +21,7 @@ public class Clock implements Sensors {
 	@Override
 	public void setMeasurement(Double measurement) {
 		// TODO Auto-generated method stub
+		updateMeasurement(measurement);
 		this.measurement = measurement;
 	}
 
