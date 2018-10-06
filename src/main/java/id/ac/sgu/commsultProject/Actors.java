@@ -1,8 +1,6 @@
 package id.ac.sgu.commsultProject;
 
-public class Actors {
-	public void updateStatus() {
-		// TODO Auto-generated method stub
-
-	}
+public interface Actors {
+	public void updateStatus(Double value);
+	public boolean checkValue(Double value);
 }
