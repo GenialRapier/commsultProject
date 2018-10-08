@@ -14,6 +14,27 @@ public class MainController implements PropertyChangeListener {
 		// TODO Auto-generated method stub
 		System.out.println(evt.getPropertyName() + " " + evt.getOldValue());
 		System.out.println(evt.getPropertyName() + " " + evt.getNewValue());
+		if (isTemperature(evt)) {
+			
+		}
+		else if (isWind(evt)) {
+			
+		}
+		else if (isTime(evt)) {
+			
+		}
+	}
+
+	private boolean isTime(PropertyChangeEvent evt) {
+		return evt.getPropertyName().equalsIgnoreCase("Time");
+	}
+
+	private boolean isWind(PropertyChangeEvent evt) {
+		return evt.getPropertyName().equalsIgnoreCase("Wind");
+	}
+
+	private boolean isTemperature(PropertyChangeEvent evt) {
+		return evt.getPropertyName().equalsIgnoreCase("Temperature");
 	}
 
 }
