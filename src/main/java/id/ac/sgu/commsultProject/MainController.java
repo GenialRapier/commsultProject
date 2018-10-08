@@ -12,7 +12,8 @@ public class MainController implements PropertyChangeListener {
 	@Override
 	public void propertyChange(PropertyChangeEvent evt) {
 		// TODO Auto-generated method stub
-		
+		System.out.println(evt.getPropertyName() + " " + evt.getOldValue());
+		System.out.println(evt.getPropertyName() + " " + evt.getNewValue());
 	}
 
 }
