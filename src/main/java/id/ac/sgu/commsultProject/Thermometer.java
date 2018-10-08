@@ -16,7 +16,7 @@ public class Thermometer implements Sensors {
 	@Override
 	public void updateMeasurement(Double measurement) {
 		// TODO Auto-generated method stub
-		support.firePropertyChange("Temperature measurement", this.measurement, measurement);
+		support.firePropertyChange("Temperature", this.measurement, measurement);
 	}
 
 	@Override

@@ -16,7 +16,7 @@ public class Anemometer implements Sensors {
 	@Override
 	public void updateMeasurement(Double measurement) {
 		// TODO Auto-generated method stub
-		support.firePropertyChange("Wind speed measurement", this.measurement, measurement);
+		support.firePropertyChange("Wind", this.measurement, measurement);
 	}
 
 	@Override

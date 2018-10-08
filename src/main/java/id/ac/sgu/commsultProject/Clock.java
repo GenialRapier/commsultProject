@@ -16,7 +16,7 @@ public class Clock implements Sensors {
 	@Override
 	public void updateMeasurement(Double measurement) {
 		// TODO Auto-generated method stub
-		support.firePropertyChange("Time measurement", this.measurement, measurement);
+		support.firePropertyChange("Time", this.measurement, measurement);
 	}
 
 	@Override
