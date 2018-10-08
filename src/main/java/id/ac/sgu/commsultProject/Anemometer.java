@@ -8,14 +8,15 @@ public class Anemometer implements Sensors {
 	private Double measurement;
 	private PropertyChangeSupport support;
 	
-	public Anemometer() {
+	public Anemometer(PropertyChangeListener pcl) {
 		support = new PropertyChangeSupport(this);
+		addPropertyChangeListener(pcl);
 	}
 
 	@Override
 	public void updateMeasurement(Double measurement) {
 		// TODO Auto-generated method stub
-		support.firePropertyChange("measurement", this.measurement, measurement);
+		support.firePropertyChange("Wind speed measurement", this.measurement, measurement);
 	}
 
 	@Override

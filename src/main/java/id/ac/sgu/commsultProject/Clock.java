@@ -8,14 +8,15 @@ public class Clock implements Sensors {
 	private Double measurement;
 	private PropertyChangeSupport support;
 	
-	public Clock() {
+	public Clock(PropertyChangeListener pcl) {
 		support = new PropertyChangeSupport(this);
+		addPropertyChangeListener(pcl);
 	}
 
 	@Override
 	public void updateMeasurement(Double measurement) {
 		// TODO Auto-generated method stub
-		support.firePropertyChange("measurement", this.measurement, measurement);
+		support.firePropertyChange("Time measurement", this.measurement, measurement);
 	}
 
 	@Override
